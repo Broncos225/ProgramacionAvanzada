@@ -11,6 +11,8 @@ st.title("Programación Avanzada")
 
 df = pd.read_csv("Listado.csv")
 
+df["RH"] = df["RH"].str.replace('0', 'O', regex=False)
+
 df = df.drop('Unnamed: 10', axis=1)
 
 df["Estatura"] = df["Estatura"].str.replace(',', '.')
